@@ -4,6 +4,22 @@ A cross-platform task tracking application built with React, Material UI, and Ex
 
 ## Getting Started
 
+
+### Git Workflow (Windows/Linux)
+
+To contribute changes, use the following commands in your terminal:
+
+```sh
+git checkout -b {branchname}
+git add .
+git commit -m "Message here"
+git push
+```
+
+Replace `{branchname}` with your desired branch name and `"Message here"` with a descriptive commit message.
+
+---
+
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or newer recommended)
