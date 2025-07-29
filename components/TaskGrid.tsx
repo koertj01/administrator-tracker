@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paper, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material'
+import { Box, Paper, Table, TableBody, TableCell, TableHead, TableRow } from '@mui/material'
 import dayjs from 'dayjs'
 import Task from './Task'
 
@@ -12,7 +12,7 @@ const tasks = [
 
 function TaskGrid() {
   return (
-    <Paper>
+    <Box sx={{ overflow: "auto" }}>
         <Table sx={{ minWidth: 700, backgroundColor: '#f9fafb', borderRadius: 2 }}>
             <TableHead>
             <TableRow sx={{ backgroundColor: '#1976d2' }}>
@@ -39,7 +39,7 @@ function TaskGrid() {
             ))}
             </TableBody>
         </Table>
-    </Paper>
+    </Box>
   )
 }
 
