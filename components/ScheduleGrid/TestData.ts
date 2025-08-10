@@ -21,30 +21,27 @@ export const testTeamGroups: TeamGroup[] = [
   },
 ];
 
-export const testEvents: ScheduleEvent[] = [
+export const testEvents = [
   {
+    id: "evt-1",
     memberId: "m1",
-    date: today,
     title: "Code Review",
     color: "#2196f3",
+    date: new Date(2025, 7, 11), // Aug 11 2025
   },
   {
-    memberId: "m1",
-    date: addDays(today, 1),
+    id: "evt-2",
+    memberId: "m2",
     title: "Sprint Planning",
     color: "#4caf50",
+    date: new Date(2025, 7, 12),
   },
   {
-    memberId: "m2",
-    date: today,
+    id: "evt-3",
+    memberId: "m3",
     title: "Bug Fixing",
-    color: "#f44336",
-  },
-  {
-    memberId: "m4",
-    date: addDays(today, 2),
-    title: "Design Review",
     color: "#ff9800",
+    date: new Date(2025, 7, 13),
   },
 ];
 

@@ -2,6 +2,9 @@ import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 // import { NavigationContainer } from "@react-navigation/native";
 // import { createStackNavigator } from "@react-navigation/stack";
 // import { createDrawerNavigator } from "@react-navigation/drawer";
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { Feather } from "@expo/vector-icons";
 import { useWindowDimensions } from "react-native";
 // import { ScheduleGrid } from "./ScheduleGrid"; // Assuming ScheduleGrid from previous context
@@ -12,6 +15,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import TaskGrid from "./components/TaskGrid";
+import React, { useEffect } from "react";
 
 // Placeholder components for each view
 const DashboardScreen = () => (
@@ -43,7 +47,9 @@ const KanbanScreen = () => (
 
 const TaskGridScreen = () => (
   <View style={styles.content}>
-    <TaskGrid />
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <TaskGrid />
+    </LocalizationProvider>
   </View>
 );
 
@@ -84,6 +90,7 @@ const CustomDrawerContent = ({ navigation }) => {
 // Navigation Setup
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
+
 
 const App = () => {
   const { width } = useWindowDimensions();
